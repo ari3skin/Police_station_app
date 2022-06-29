@@ -1,4 +1,4 @@
-package application.front_end.java;
+package application.police_station_app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
