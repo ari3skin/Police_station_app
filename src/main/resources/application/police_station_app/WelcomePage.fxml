@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.WelcomePageController">
    <Label fx:id="kpsLabel" layoutX="349.0" layoutY="55.0" prefHeight="50.0" prefWidth="200.0" text="Kenya Police Service">
       <font>
          <Font size="20.0" />
@@ -18,8 +18,8 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Button fx:id="btn_register" layoutX="340.0" layoutY="275.0" mnemonicParsing="false" text="Registration" />
-   <Button fx:id="btn_login" layoutX="479.0" layoutY="275.0" mnemonicParsing="false" text="Login" />
+   <Button fx:id="btn_register" layoutX="340.0" layoutY="275.0" mnemonicParsing="false" onAction="#register" text="Registration" />
+   <Button fx:id="btn_login" layoutX="479.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" text="Login" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@KPS-logo-1.png" />

@@ -12,12 +12,12 @@ public class WelcomePage extends Application {
         FXMLLoader loader = new FXMLLoader(WelcomePage.class.getResource("WelcomePage.fxml"));
         Scene scn1 = new Scene(loader.load());
 
-        String css = this.getClass().getResource("WelcomePage.css").toExternalForm();
+        String css = this.getClass().getResource("Style.css").toExternalForm();
         scn1.getStylesheets().add(css);
 
-        Image icon = new Image("application/police_station_app/Kenya-logo-1.png");
+//        Image icon = new Image("application/police_station_app/Kenya-logo-1.png");
+//        stage.getIcons().add(icon);
 
-        stage.getIcons().add(icon);
         stage.setTitle("Kenya Police Service Program");
         stage.setScene(scn1);
         stage.show();

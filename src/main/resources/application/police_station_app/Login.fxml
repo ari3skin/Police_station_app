@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.police_station_app.LoginController">
+   <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="back"/>
+   <ImageView fitHeight="215.0" fitWidth="281.0" layoutX="14.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@KPS-logo-1.png"/>
+   </ImageView>
+   <Label layoutX="331.0" layoutY="145.0" prefHeight="35.0" prefWidth="85.0" text="Username :">
+      <font>
+         <Font size="17.0"/>
+      </font>
+   </Label>
+   <Label layoutX="331.0" layoutY="204.0" prefHeight="35.0" prefWidth="85.0" text="Password :">
+      <font>
+         <Font size="18.0"/>
+      </font>
+   </Label>
+   <TextField layoutX="428.0" layoutY="150.0"/>
+   <PasswordField layoutX="428.0" layoutY="209.0"/>
+   <Button layoutX="402.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="59.0" text="Login"/>
+   <Button layoutX="473.0" layoutY="283.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0"
+           text="Forgot password"/>
+</AnchorPane>
