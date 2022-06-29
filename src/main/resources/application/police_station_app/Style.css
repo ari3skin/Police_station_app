@@ -5,10 +5,7 @@
     -fx-text-fill: #121619;
     -fx-font-weight: bold;
 }
-#btn_login, #btn_register{
+.button{
     -fx-background-color: #121619;
     -fx-text-fill: #FFB703;
-}
-#btn_login:hover, #btn_register:hover{
-    -fx-cursor: hover;
 }
