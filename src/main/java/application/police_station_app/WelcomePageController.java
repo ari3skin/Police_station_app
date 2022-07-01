@@ -45,7 +45,7 @@ public class WelcomePageController {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Exit Program");
         alert.setHeaderText("You are about to Exit");
-        alert.setContentText("Press Cancel to go back?");
+        alert.setContentText("Press Cancel to go back");
 
         if (alert.showAndWait().get() == ButtonType.OK){
             stage = (Stage) pane1.getScene().getWindow();

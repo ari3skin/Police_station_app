@@ -18,12 +18,10 @@
          <Font size="15.0" />
       </font>
    </Label>
-   <Button fx:id="btn_register" layoutX="340.0" layoutY="275.0" mnemonicParsing="false" onAction="#register" text="Registration" />
-   <Button fx:id="btn_login" layoutX="479.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" text="Login" />
+   <Button fx:id="btn_register" contentDisplay="CENTER" layoutX="340.0" layoutY="275.0" mnemonicParsing="false" onAction="#register" text="Registration" underline="true" />
+   <Button fx:id="btn_login" layoutX="479.0" layoutY="275.0" mnemonicParsing="false" onAction="#login" text="Login" underline="true" />
    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@KPS-logo-1.png" />
-      </image>
+      <Image url="@KPS-logo-1.png" />
    </ImageView>
    <Button fx:id="btn_exit" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" text="Exit App" />
 </AnchorPane>
