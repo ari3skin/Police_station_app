@@ -14,6 +14,8 @@ import java.io.File;
 public class WelcomePage extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+        Image icon = new Image(getClass().getResourceAsStream("logo1.png"));
+        stage.getIcons().add(icon);
         FXMLLoader loader = new FXMLLoader(WelcomePage.class.getResource("WelcomePage.fxml"));
         Scene scn1 = new Scene(loader.load());
 

@@ -8,4 +8,5 @@
 .button{
     -fx-background-color: #121619;
     -fx-text-fill: #FFB703;
+    -fx-cursor: pointer;
 }
