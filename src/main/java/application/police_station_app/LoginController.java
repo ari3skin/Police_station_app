@@ -1,5 +1,6 @@
 package application.police_station_app;
 
+import RMI.Hello_Interface;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,6 +8,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
 
 public class LoginController {
     Scene scn1;
@@ -28,4 +32,16 @@ public class LoginController {
         stage.setScene(scn1);
         stage.show();
     }
-}
+    public void login(ActionEvent a) throws IOException {
+     try {
+        // Getting the registry
+        Registry registry = LocateRegistry.getRegistry(null);
+
+        // Looking up the registry for the remote object
+        Hello_Interface obj = (Hello_Interface) registry.lookup("hh_bind-name");
+        obj.execute_imp("");
+    } catch (Exception e) {
+        System.err.println("Client exception: " + e.toString());
+        e.printStackTrace();
+    }
+}}

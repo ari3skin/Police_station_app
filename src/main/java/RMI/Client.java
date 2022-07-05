@@ -5,24 +5,19 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-public class Client {
-    Hello_Interface stub;
+public class Client{
 
-    private Client(){
-        Registry registry = null;
-        try {
-            registry = LocateRegistry.getRegistry(null);
-        } catch (RemoteException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            stub = (Hello_Interface) registry.lookup("kps");
-        } catch (RemoteException e) {
-            throw new RuntimeException(e);
-        } catch (NotBoundException e) {
-            throw new RuntimeException(e);
-        }
+    /// The client class will be used by the javafx application to execute queries
+
+    public Hello_Interface stub;
+
+    Client() throws RemoteException, NotBoundException {
+        Registry registry = LocateRegistry.getRegistry();
+        stub = (Hello_Interface) registry.lookup("kps");
     }
 
+    public Hello_Interface getStub() {
+        return stub;
+    }
 
 }
