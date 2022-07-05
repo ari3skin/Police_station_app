@@ -6,8 +6,6 @@ module application.police_station_app {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires eu.hansolo.tilesfx;
-    requires java.rmi;
-    requires java.sql;
 
     opens application.police_station_app to javafx.fxml;
     exports application.police_station_app;
