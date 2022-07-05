@@ -1,0 +1,69 @@
+*----UI Part----*
+1. Welcome, Page
+2. Login page
+3. Registration page
+4. Dashboard
+5. Register/Report a crime (form)
+6. Register weapons
+7. generating crime stats
+8. leasing weapons
+9. retrieving records of a crime
+
+*---Splitting the work---*
+1. Ryan
+- design and make the UI(s) for everything
+
+2. Sifa :
+-splitting the work with Edwin
+
+3. Edinah
+-databases and likes including the java classes
+
+4. Edwin
+- Server end
+    this includes the RMI
+
+*---Back End---*
+Server Program
+Client program
+RMI
+Implementation classes
+
+*----Database Content----*
+TABLES:
+1.weapons list
+    -weapon id (pk)
+    -weapon name
+    -weapon type
+    -status (leased or not leased)
+    -officer id (fk)
+
+2.officers
+    -officer id (pk)
+    -officer name
+    -national id
+    -patrol unit
+
+3.cases
+    -ob number (pk)
+    -officer id (fk)
+    -date time
+    -national id for victim
+    -description
+
+4.crime : list of crimes committed
+    -crime id
+    -crime commit date
+    -crime solved (boolean value)
+    -ob number (fk)
+    -crime description
+
+5.criminals
+    -criminal id (pk)
+    -criminal name
+    -criminal national id
+    -date arrested
+    -next of kin
+    -crime id (fk)
+    -term serving in jail
+    -suspect (boolean)

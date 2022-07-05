@@ -1,0 +1,38 @@
+.root {
+    -fx-background-color: #FFB703;
+}
+
+.label {
+    -fx-text-fill: #121619;
+    -fx-font-weight: bold;
+}
+
+#btn_register, #btn_login, #btn_exit, #btn_forgortPassword, #btn_back, #btn_logout, #btn_home {
+    -fx-background-color: #121619;
+    -fx-text-fill: #FFB703;
+    -fx-border-radius: 20px;
+    -fx-font-weight: bolder;
+}
+#btn_home{
+    -fx-font-size: 20px;
+    -fx-border-radius: 20px;
+}
+#title{
+    -fx-text-fill: #FFB703;
+}
+#navigation{
+    -fx-background-color: #224092;
+}
+#btn_crimeReport, #btn_weapons,#btn_statistics {
+    -fx-background-color: #224092;
+    -fx-border-color: #A56AD7;
+    -fx-border-radius: 20px;
+    -fx-font-weight: bolder;
+}
+#lbl_motto,#fld_search{
+    -fx-border-color: #121619;
+    -fx-border-radius: 20px;
+}
+#fld_search{
+    -fx-background-color: transparent;
+}
