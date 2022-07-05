@@ -7,10 +7,11 @@ import java.sql.SQLException;
 
 public class Implementation implements Hello_Interface{
     public ResultSet execute_imp( String query) throws SQLException {
-                return  Database.execute(query);
+                Database database = new Database();
+                return database.execute(query);
              }
 
              public int executeUpdate_imp(String query) throws SQLException {
-                return Database.executeUpdate(query);
+                return new Database().executeUpdate(query);
              }
              }
