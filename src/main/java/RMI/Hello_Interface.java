@@ -3,9 +3,8 @@ package RMI;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.sql.*;
-
-    public interface Hello_Interface extends Remote{
+public interface Hello_Interface extends Remote{
         ResultSet execute_imp( String query) throws SQLException;
         int executeUpdate_imp(String query) throws SQLException;
-           }
+}
 

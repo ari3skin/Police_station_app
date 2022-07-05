@@ -13,5 +13,4 @@ public class Implementation implements Hello_Interface{
              public int executeUpdate_imp(String query) throws SQLException {
                 return Database.executeUpdate(query);
              }
-}
-
+             }

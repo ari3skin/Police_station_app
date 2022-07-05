@@ -1,0 +1,27 @@
+.container-rounded {
+    -fx-background-radius: 20;
+}
+.container-white{
+    -fx-background-color: rgba(255,255,255,0.2);
+
+}
+.dark-background{
+    -fx-background-color: #081B33;
+
+}
+.container{
+    -fx-background-color: #152642;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(255,255,255,0.02),10.0,0.0,0.0,10.0);
+}
+.divider{
+    -fx-background-color: #081B33;
+
+}
+.axis{
+    -fx-stroke: #fff;
+    -fx-fill: #fff;
+    -fx-font-size: 24;
+    -fx-tick-label-fill: #fff;
+}
