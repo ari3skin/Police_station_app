@@ -22,7 +22,7 @@ public class RegisterController {
 
     // TODO: 05/07/2022 a method to capture data for registering the user is to be made before the one below 
     public void login(ActionEvent e) throws IOException {
-        loader = new FXMLLoader(DashboardController.class.getResource("Dashboard.fxml"));
+        loader = new FXMLLoader(ReportController.class.getResource("Dashboard.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
         scn1 = new Scene(loader.load());
         stage.setScene(scn1);
