@@ -18,6 +18,7 @@ import java.rmi.server.UnicastRemoteObject;
 
                 Registry registry = LocateRegistry.getRegistry();
 
+
                 registry.bind("kps", hh);
                 System.err.println("Server is Running");
             } catch (Exception e) {
