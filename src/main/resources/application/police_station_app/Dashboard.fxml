@@ -74,7 +74,7 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Label fx:id="lbl_motto" alignment="BASELINE_CENTER" layoutX="191.0" layoutY="86.0" prefHeight="35.0" prefWidth="457.0" text="Utumishi kwa Wote" textAlignment="CENTER">
+   <Label fx:id="lbl_motto" alignment="BASELINE_CENTER" layoutX="293.0" layoutY="91.0" prefHeight="35.0" prefWidth="224.0" text="Utumishi kwa Wote" textAlignment="CENTER">
       <font>
          <Font size="24.0" />
       </font>
