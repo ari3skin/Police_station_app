@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.rmi.NotBoundException;
 
-public class Dashboard extends Application {
+public class Report extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -17,9 +17,9 @@ public class Dashboard extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException, NotBoundException {
-        Parent root = FXMLLoader.load(Dashboard.class.getResource("dashboard.fxml"));
-        primaryStage.setTitle("Police Dashboard");
-        primaryStage.setScene(new Scene(root,1000,780));
-        primaryStage.show();
+//        Parent root = FXMLLoader.load(D.class.getResource("dashboard.fxml"));
+//        primaryStage.setTitle("Police Dashboard");
+//        primaryStage.setScene(new Scene(root,1000,780));
+//        primaryStage.show();
     }
 }

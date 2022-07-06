@@ -16,7 +16,7 @@ public class ReportController implements Initializable {
     private LineChart<?,?> lineChart;
 
 
-    public DashboardController() throws NotBoundException, RemoteException {
+    public ReportController() throws NotBoundException, RemoteException {
     }
 
     @Override
