@@ -10,7 +10,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
-public class DashboardController implements Initializable {
+public class ReportController implements Initializable {
 
     @FXML
     private LineChart<?,?> lineChart;
