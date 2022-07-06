@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.DashboardController">
-   <VBox fx:id="navigation" prefHeight="500.0" prefWidth="151.0" stylesheets="@Style.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../resources/application/police_station_app/Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.DashboardController">
+   <VBox fx:id="navigation" prefHeight="500.0" prefWidth="151.0" stylesheets="@../resources/application/police_station_app/Style.css">
       <ImageView fitHeight="74.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@KPS-logo-1.png" />
+            <Image url="@../resources/application/police_station_app/KPS-logo-1.png" />
          </image>
          <VBox.margin>
             <Insets left="25.0" top="10.0" />
@@ -29,7 +29,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="btn_crimeReport" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="110.0" stylesheets="@Style.css" text="Crime Report" textFill="WHITE">
+      <Button fx:id="btn_crimeReport" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="110.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Crime Report" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="25.0" left="20.0" top="45.0" />
          </VBox.margin>
@@ -41,7 +41,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn_weapons" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="132.0" stylesheets="@Style.css" text="Weapons Section" textFill="WHITE">
+      <Button fx:id="btn_weapons" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="132.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Weapons Section" textFill="WHITE">
          <padding>
             <Insets left="20.0" />
          </padding>
@@ -52,7 +52,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btn_statistics" mnemonicParsing="false" prefHeight="42.0" prefWidth="97.0" stylesheets="@Style.css" text="Statistics" textFill="WHITE">
+      <Button fx:id="btn_statistics" mnemonicParsing="false" prefHeight="42.0" prefWidth="97.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Statistics" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="25.0" left="25.0" top="20.0" />
          </VBox.margin>
@@ -69,7 +69,7 @@
          </cursor>
       </Button>
    </VBox>
-   <Button fx:id="btn_home" layoutX="193.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="407.0" AnchorPane.topAnchor="150.0">
+   <Button fx:id="btn_home" layoutX="193.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Home" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="407.0" AnchorPane.topAnchor="150.0">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
@@ -80,17 +80,17 @@
       </font>
    </Label>
    <TextField fx:id="fld_search" layoutX="337.0" layoutY="33.0" prefHeight="35.0" prefWidth="152.0" />
-   <Button fx:id="btn_home" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Button fx:id="btn_home" layoutX="413.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home" layoutX="413.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Button fx:id="btn_home" layoutX="526.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home" layoutX="526.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>

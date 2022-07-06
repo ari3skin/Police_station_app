@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.RegisterController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../resources/application/police_station_app/Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.RegisterController">
    <Button fx:id="btn_back" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#back" text="Back">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
    <ImageView fitHeight="232.0" fitWidth="227.0" layoutX="14.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@KPS-logo-1.png" />
+      <Image url="@../resources/application/police_station_app/KPS-logo-1.png" />
    </ImageView>
    <Label layoutX="344.0" layoutY="13.0" text="Welcome New User">
       <font>
