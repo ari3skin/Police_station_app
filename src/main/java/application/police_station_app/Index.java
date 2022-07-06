@@ -261,6 +261,7 @@ public class Index extends Application {
 //        3.buttons
         btn_back_reg.setLayoutX(20.0);
         btn_back_reg.setLayoutY(20.0);
+        btn_back_reg.setMnemonicParsing(false);
         btn_back_reg.setId("btn_exit");
         btn_back_reg.setCursor(Cursor.cursor("HAND"));
 
