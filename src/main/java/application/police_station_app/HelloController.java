@@ -18,7 +18,7 @@ public class HelloController implements Initializable {
     @FXML
     private Label welcomeText;
 
-    public HelloController() throws NotBoundException, RemoteException {
+    public HelloController() throws NotBoundException, RemoteException, SQLException {
     }
 
     @FXML

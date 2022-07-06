@@ -1,4 +1,4 @@
-package RMI.models;
+package RMI;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
