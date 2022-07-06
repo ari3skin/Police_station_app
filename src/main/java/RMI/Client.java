@@ -15,9 +15,9 @@ public class Client {
     public Client() throws SQLException {
     }
 
-    public void login(String uname, String pass) throws SQLException, RemoteException {
-        String query = "";
-        stub.execute(query);
+    public void login(String uname, String pass) throws SQLException {
+
+
     }
 
     public void register(String fname, String lname, String email, String phone, int nationalID, String password) throws SQLException {
@@ -25,7 +25,7 @@ public class Client {
         stub.executeUpdate(query);
     }
 
-    /*public ArrayList<Weapon> weaponsList() throws SQLException, RemoteException {
+    public ArrayList<Weapon> weaponsList() throws SQLException, RemoteException {
         String query = Weapon.listQuery;
         ArrayList<Weapon> list = new ArrayList<>();
         ResultSet resultSet = stub.execute(query);
@@ -109,8 +109,8 @@ public class Client {
     public void registerOfficer(String fname, String lname, String email, String phone, int nationalID, String password) {
         String query = "";
         try {
-            stub.executeUpdate_imp(query);
-        } catch (RemoteException e) {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
 
         }
@@ -118,17 +118,16 @@ public class Client {
     public void registerWeapon(String fname, String lname, String email, String phone, int nationalID, String password) {
         String query = "";
         try {
-            stub.executeUpdate_imp(query);
-        } catch (RemoteException e) {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
-
         }
     }
     public void fileCase(String fname, String lname, String email, String phone, int nationalID, String password) {
         String query = "";
         try {
-            stub.executeUpdate_imp(query);
-        } catch (RemoteException e) {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
 
         }
@@ -136,11 +135,10 @@ public class Client {
     public void registerCriminal(String fname, String lname, String email, String phone, int nationalID, String password) {
         String query = "";
         try {
-            stub.executeUpdate_imp(query);
-        } catch (RemoteException e) {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
             throw new RuntimeException(e);
-
         }
-    }*/
+    }
 
 }

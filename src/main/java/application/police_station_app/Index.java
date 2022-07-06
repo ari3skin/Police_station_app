@@ -1,5 +1,8 @@
 package application.police_station_app;
 
+import RMI.Client;
+import RMI.Database;
+import java.sql.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Cursor;
@@ -12,6 +15,10 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Objects;
 
 public class Index extends Application {
@@ -292,11 +299,46 @@ public class Index extends Application {
         btn_login_scn.setOnAction(e -> stage.setScene(scn2));
         btn_register_scn.setOnAction(e -> stage.setScene(scn3));
 
+Database client= new Database();
         btn_login.setOnAction(e -> {
+            String userName = fld_username.getText();
+            String password = fld_password.getText();
             try {
-                dashboard();
+
+                String query = "SELECT  FirstName,Password FROM officers WHERE FirstName= '"+userName+"' AND Password='"+password+"'";
+
+                ResultSet rs = client.execute(query);
+                if (rs.next()) {
+                dashboard();}
+                else {
+                    Alert al = new Alert(Alert.AlertType.WARNING);
+                    al.setContentText("Invalid Credentials");
+                    al.show();
+                }
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
+            }
+        });
+        btn_register.setOnAction(e -> {
+            String FName = fld_firstname.getText();
+            String SName = fld_lastname.getText();
+            String id = fld_nationalID.getText();
+            String email = fld_email.getText();
+            String phone_no = fld_phoneNumber.getText();
+            String password = fld_reg_password.getText();
+            try {
+
+                String query = "INSERT INTO officers(FirstName,LastName,National_ID,email,phoneNumber,Password)" +
+                        "VALUES('"+FName+"','"+SName+"','"+id+"','"+email+"','"+phone_no+"','"+password+"')";
+                client.executeUpdate(query);
+                stage.setScene(scn2);
+
+            } catch (Exception ex) {
+                Alert al = new Alert(Alert.AlertType.WARNING);
+                al.setContentText("Unable to register");
+                al.show();
+                throw new RuntimeException(ex);
+
             }
         });
 

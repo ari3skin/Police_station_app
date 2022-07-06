@@ -6,10 +6,10 @@ import java.sql.*;
 public class Database {
     public static Connection connection;
 
-    Database() throws SQLException {
+    public Database() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/exercise?", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/police", "root", "");
 
         } catch (Exception e) {
             throw new RuntimeException(e);
