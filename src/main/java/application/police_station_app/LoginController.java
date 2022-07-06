@@ -32,13 +32,11 @@ public class LoginController {
         stage.setScene(scn1);
         stage.show();
     }
-    public void login(ActionEvent a) throws IOException {
+    public void login1(ActionEvent a) throws IOException {
      try {
-        // Getting the registry
-        Registry registry = LocateRegistry.getRegistry(null);
 
-        // Looking up the registry for the remote object
        Client client = new Client();
+
 
     } catch (Exception e) {
         System.err.println("Client exception: " + e.toString());

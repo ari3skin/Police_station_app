@@ -36,7 +36,7 @@
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor></PasswordField>
-   <Button fx:id="btn_login" layoutX="402.0" layoutY="283.0" mnemonicParsing="false" onAction="#dashboard" prefHeight="35.0" prefWidth="59.0" text="Login">
+   <Button fx:id="btn_login" layoutX="402.0" layoutY="283.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="59.0" text="Login">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></Button>
