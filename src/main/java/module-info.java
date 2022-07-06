@@ -11,6 +11,7 @@ module application.police_station_app {
     requires java.sql;
     requires org.jetbrains.annotations;
 
+
     opens application.police_station_app to javafx.fxml;
     exports application.police_station_app;
 }

@@ -37,7 +37,7 @@ public class Client {
         }
     }
 
-    public ArrayList<Weapon> weaponsList() throws SQLException, RemoteException {
+    /*public ArrayList<Weapon> weaponsList() throws SQLException, RemoteException {
         String query = Weapon.listQuery;
         ArrayList<Weapon> list = new ArrayList<>();
         ResultSet resultSet = stub.execute_imp(query);
@@ -150,6 +150,6 @@ public class Client {
             throw new RuntimeException(e);
 
         }
-    }
+    }*/
 
 }
