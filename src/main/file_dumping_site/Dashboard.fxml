@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../resources/application/police_station_app/Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.DashboardController">
-   <VBox fx:id="navigation" prefHeight="500.0" prefWidth="151.0" stylesheets="@../resources/application/police_station_app/Style.css">
+   <VBox fx:id="navigation" prefHeight="500.0" prefWidth="169.0" stylesheets="@../resources/application/police_station_app/Style.css">
       <ImageView fitHeight="74.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../resources/application/police_station_app/KPS-logo-1.png" />
@@ -21,12 +21,12 @@
             <Insets left="25.0" top="10.0" />
          </VBox.margin>
       </ImageView>
-      <Label fx:id="title" text="Navigation board" textFill="#ffb703">
+      <Label fx:id="title" prefHeight="26.0" prefWidth="147.0" text="Navigation board" textFill="#ffb703">
          <VBox.margin>
             <Insets left="15.0" top="30.0" />
          </VBox.margin>
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="13.0" />
          </font>
       </Label>
       <Button fx:id="btn_crimeReport" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="44.0" prefWidth="110.0" stylesheets="@../resources/application/police_station_app/Style.css" text="Crime Report" textFill="WHITE">

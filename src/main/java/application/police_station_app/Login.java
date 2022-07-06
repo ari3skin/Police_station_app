@@ -71,6 +71,7 @@ public class Login extends Application {
         lbl5.setPrefHeight(35.0);
         lbl5.setPrefWidth(110.0);
         lbl5.setId("password");
+        //now
 
         //2.text and password fields
         fld_username.setLayoutX(428.0);
