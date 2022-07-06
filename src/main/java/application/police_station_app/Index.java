@@ -1,6 +1,7 @@
 package application.police_station_app;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -291,6 +292,15 @@ public class Index extends Application {
         btn_login_scn.setOnAction(e -> stage.setScene(scn2));
         btn_register_scn.setOnAction(e -> stage.setScene(scn3));
 
+        btn_login.setOnAction(e -> {
+            try {
+                dashboard();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+
         stage.setTitle("Kenya Police Service Program");
         stage.setResizable(false);
         stage.setScene(scn1);
@@ -310,6 +320,11 @@ public class Index extends Application {
         }
     }
 
+    public void dashboard() throws Exception {
+        Stage stage = new Stage();
+        Dashboard obj1 = new Dashboard();
+        obj1.start(stage);
+    }
 
     public static void main(String[] args) {
         launch(args);

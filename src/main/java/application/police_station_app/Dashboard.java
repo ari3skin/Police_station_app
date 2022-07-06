@@ -1,6 +1,7 @@
 package application.police_station_app;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
@@ -21,12 +22,14 @@ import java.io.InputStream;
 import java.util.Objects;
 
 public class Dashboard extends Application {
+    static Scene scn3;
+    static AnchorPane pane4;
     @Override
     public void start(Stage stage) throws Exception {
-        AnchorPane pane3 = new AnchorPane();
-        Scene scn3 = new Scene(pane3);
+        pane4 = new AnchorPane();
+        scn3 = new Scene(pane4);
 
-        pane3.setMinSize(700, 500);
+        pane4.setMinSize(700, 500);
 
         //adding the css file
         String css = Objects.requireNonNull(this.getClass().getResource("Style.css")).toExternalForm();
@@ -60,7 +63,7 @@ public class Dashboard extends Application {
 
 
         //adding the controls to the pane and vbox
-        pane3.getChildren().addAll(navigation);
+        pane4.getChildren().addAll(navigation);
         navigation.getChildren().addAll(view,lbl1,btn_crimeReport,btn_weapons,btn_statistics,btn_logout);
 
 //customizing the controls
@@ -111,7 +114,7 @@ public class Dashboard extends Application {
         btn_logout.setCursor(Cursor.cursor("HAND"));
 
         //below ensures the x close button works
-        btn_logout.setOnAction(e -> exit(stage));
+        btn_logout.setOnAction(e -> logout());
         stage.setOnCloseRequest(e -> {
             e.consume();
             exit(stage);
@@ -128,5 +131,10 @@ public class Dashboard extends Application {
             System.out.println("You have exited the Logout Page");
             stage.close();
         }
+    }
+
+    public void logout(){
+        Platform.exit();
+        System.out.println("You Have Exited the program");
     }
 }
