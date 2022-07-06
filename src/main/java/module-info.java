@@ -10,6 +10,7 @@ module application.police_station_app {
 
     requires java.sql;
     requires org.jetbrains.annotations;
+    requires mysql.connector.java;
 
     opens application.police_station_app to javafx.fxml;
     exports application.police_station_app;
