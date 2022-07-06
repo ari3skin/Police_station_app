@@ -8,7 +8,7 @@ import javafx.scene.chart.XYChart;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DashboardController implements Initializable {
+public class ReportController implements Initializable {
 
     @FXML
     private LineChart<?,?> lineChart;
