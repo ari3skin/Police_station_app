@@ -6,6 +6,8 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 import java.net.URL;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
 public class ReportController implements Initializable {
@@ -14,10 +16,13 @@ public class ReportController implements Initializable {
     private LineChart<?,?> lineChart;
 
 
+    public ReportController() throws NotBoundException, RemoteException {
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         inlineChart();
+
     }
 
     private void inlineChart() {
@@ -26,6 +31,10 @@ public class ReportController implements Initializable {
         series.getData().add(new XYChart.Data("February",10));
         lineChart.getData().addAll(series);
     }
+
+
+
+
 
 
 

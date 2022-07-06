@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.rmi.NotBoundException;
 
 public class Report extends Application {
 
@@ -15,10 +16,10 @@ public class Report extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(Report.class.getResource("report.fxml"));
-        primaryStage.setTitle("Police Dashboard");
-        primaryStage.setScene(new Scene(root,1000,780));
-        primaryStage.show();
+    public void start(Stage primaryStage) throws IOException, NotBoundException {
+//        Parent root = FXMLLoader.load(D.class.getResource("dashboard.fxml"));
+//        primaryStage.setTitle("Police Dashboard");
+//        primaryStage.setScene(new Scene(root,1000,780));
+//        primaryStage.show();
     }
 }

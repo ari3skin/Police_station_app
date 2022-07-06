@@ -21,12 +21,12 @@
 
 4. Edwin
 - Server end
-    this includes the RMI
+    this includes the application.police_station_app.RMI
 
 *---Back End---*
 Server Program
 Client program
-RMI
+application.police_station_app.RMI
 Implementation classes
 
 *----Database Content----*
