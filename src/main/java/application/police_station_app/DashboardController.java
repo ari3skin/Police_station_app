@@ -6,6 +6,8 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 
 import java.net.URL;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Initializable {
@@ -14,10 +16,13 @@ public class DashboardController implements Initializable {
     private LineChart<?,?> lineChart;
 
 
+    public DashboardController() throws NotBoundException, RemoteException {
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         inlineChart();
+
     }
 
     private void inlineChart() {
@@ -26,6 +31,10 @@ public class DashboardController implements Initializable {
         series.getData().add(new XYChart.Data("February",10));
         lineChart.getData().addAll(series);
     }
+
+
+
+
 
 
 

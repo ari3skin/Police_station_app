@@ -1,24 +1,28 @@
 package RMI;
 
 import java.sql.*;
+
 public class Database {
     public static Connection connection;
-           Database() throws SQLException {
-                try {
-                     connection = DriverManager.getConnection("jdbc:mysql://localhost/exercise?", "root", "");
 
-                  } catch (Exception e) {
-                    throw new RuntimeException(e);
-                  }
+    Database() throws SQLException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/exercise?", "root", "");
 
-              }
-     public  ResultSet execute(String query) throws SQLException {
-               Statement statement = connection.createStatement();
-                return statement.executeQuery(query);
-              }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
-               public int executeUpdate(String query) throws SQLException {
-                   Statement statement = connection.createStatement();
-                   return statement.executeUpdate(query);
-               }
-  }
+    }
+
+    public ResultSet execute(String query) throws SQLException {
+        Statement statement = connection.createStatement();
+        return statement.executeQuery(query);
+    }
+
+    public int executeUpdate(String query) throws SQLException {
+        Statement statement = connection.createStatement();
+        return statement.executeUpdate(query);
+    }
+}

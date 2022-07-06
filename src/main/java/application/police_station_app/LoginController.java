@@ -1,6 +1,6 @@
 package application.police_station_app;
 
-import RMI.Hello_Interface;
+import RMI.Client;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -38,8 +38,8 @@ public class LoginController {
         Registry registry = LocateRegistry.getRegistry(null);
 
         // Looking up the registry for the remote object
-        Hello_Interface obj = (Hello_Interface) registry.lookup("hh_bind-name");
-        obj.execute_imp("");
+       Client client = new Client();
+
     } catch (Exception e) {
         System.err.println("Client exception: " + e.toString());
         e.printStackTrace();

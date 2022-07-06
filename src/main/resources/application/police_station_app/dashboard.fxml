@@ -4,18 +4,30 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1000.0" styleClass="dark-background" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.police_station_app.HelloController">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Label alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1001.0" text="STATION REPORT" textFill="WHITE">
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@KPS-logo-1.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="534.0" text="STATION REPORT" textFill="WHITE">
                <font>
                   <Font name="BrandonGrotesque-Black" size="20.0" />
                </font></Label>
          </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </HBox>
    </top>
    <center>
@@ -59,7 +71,7 @@
                               <Font name="BrandonGrotesque-Black" size="15.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="10" textFill="WHITE">
+                        <Label fx:id="policeCount" alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="10" textFill="WHITE">
                            <font>
                               <Font name="BrandonGrotesque-Black" size="63.0" />
                            </font>
@@ -81,7 +93,7 @@
                               <Font name="BrandonGrotesque-Black" size="15.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="30" textFill="WHITE">
+                        <Label fx:id="caseCount" alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="30" textFill="WHITE">
                            <font>
                               <Font name="BrandonGrotesque-Black" size="63.0" />
                            </font>
@@ -103,7 +115,7 @@
                               <Font name="BrandonGrotesque-Black" size="15.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="14" textFill="WHITE">
+                        <Label fx:id="crimeCount" alignment="CENTER" prefHeight="130.0" prefWidth="244.0" text="14" textFill="WHITE">
                            <font>
                               <Font name="BrandonGrotesque-Black" size="63.0" />
                            </font>
