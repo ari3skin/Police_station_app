@@ -32,7 +32,7 @@ public class WelcomePageController {
     }
     public void login(@NotNull ActionEvent e) throws IOException {
 
-        loader = new FXMLLoader(WelcomePageController.class.getResource("Login.fxml"));
+        loader = new FXMLLoader(WelcomePageController.class.getResource("Login1.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
 
         scn1 = new Scene(loader.load());
