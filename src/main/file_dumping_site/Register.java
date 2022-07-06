@@ -145,6 +145,8 @@ public class Register extends Application {
             e.consume();
             exit(stage);
         });
+
+        //button events
         btn_back.setOnAction(e -> {
             try {
                 Login obj1 = new Login();
@@ -163,7 +165,7 @@ public class Register extends Application {
         alert.setContentText("Press Cancel to go back");
 
         if (alert.showAndWait().get() == ButtonType.OK) {
-            System.out.println("You have exited the Login Page");
+            System.out.println("You have exited the Registration Page");
             stage.close();
         }
     }
