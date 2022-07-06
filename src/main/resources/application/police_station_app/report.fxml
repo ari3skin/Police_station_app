@@ -80,17 +80,17 @@
       </font>
    </Label>
    <TextField fx:id="fld_search" layoutX="337.0" layoutY="33.0" prefHeight="35.0" prefWidth="152.0" />
-   <Button fx:id="btn_home" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home1" layoutX="300.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Button fx:id="btn_home" layoutX="413.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home2" layoutX="413.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Button fx:id="btn_home" layoutX="526.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
+   <Button fx:id="btn_home3" layoutX="526.0" layoutY="150.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="100.0" stylesheets="@Style.css" text="Home">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
