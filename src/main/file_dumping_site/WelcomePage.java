@@ -1,5 +1,6 @@
 package application.police_station_app;
 
+import RMI.Client;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

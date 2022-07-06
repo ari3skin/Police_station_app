@@ -9,7 +9,7 @@
      /*-fx-font-size: 20px;*/
  }
 
-/*stlying the INDEX PAGE*/
+/*styling the INDEX PAGE*/
 
 #kpsLabel{
     -fx-font-size: 37px;
@@ -65,4 +65,5 @@
     -fx-border-color: #A56AD7;
     -fx-border-radius: 20px;
     -fx-font-weight: bolder;
+    -fx-text-fill: white;
 }
