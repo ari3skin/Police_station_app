@@ -15,9 +15,9 @@ public class Client {
     public Client() throws SQLException {
     }
 
-    public void login(String uname, String pass) throws SQLException, RemoteException {
-        String query = "";
-        stub.execute(query);
+    public void login(String uname, String pass) throws SQLException {
+
+
     }
 
     public void register(String fname, String lname, String email, String phone, int nationalID, String password) throws SQLException {
@@ -121,6 +121,40 @@ public class Client {
             newcase = Police.fromResultSet(resultSet);
         }
         return newcase;
+    }
+    public void registerOfficer(String fname, String lname, String email, String phone, int nationalID, String password) {
+        String query = "";
+        try {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+    public void registerWeapon(String fname, String lname, String email, String phone, int nationalID, String password) {
+        String query = "";
+        try {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void fileCase(String fname, String lname, String email, String phone, int nationalID, String password) {
+        String query = "";
+        try {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+    public void registerCriminal(String fname, String lname, String email, String phone, int nationalID, String password) {
+        String query = "";
+        try {
+            stub.executeUpdate(query);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
