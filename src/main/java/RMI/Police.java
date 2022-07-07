@@ -4,11 +4,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Police {
-    int id;
-    String name;
-    String nationalID;
-    String patrolUnit;
-    public static String listQuery;
+    public int id;
+    public String name ="";
+    public String nationalID="";
+    public String patrolUnit="";
+    public static String listQuery = "SELECT * FROM officers ";
 
     public  Police(int id,String name,String nationalID,String patrolUnit){
         this.id = id;
@@ -17,10 +17,10 @@ public class Police {
         this.patrolUnit = patrolUnit;
     }
     public static Police fromResultSet(ResultSet resultSet) throws SQLException {
-        int id = resultSet.getInt("id");
-        String name = resultSet.getString("name");
-        String nationalID = resultSet.getString("national_id");
-        String patrolUnit = resultSet.getString("patrol_unit");
+        int id = resultSet.getInt("Officers ID");
+        String name = resultSet.getString("Officers Name");
+        String nationalID = resultSet.getString("National ID");
+        String patrolUnit = resultSet.getString("Patrol Unit");
 
         return new Police(id,name,nationalID,patrolUnit);
     }
