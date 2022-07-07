@@ -114,7 +114,7 @@ public class Client {
     }
 
     public Police getPolice(int id) throws SQLException, RemoteException {
-        String query = Police.listQuery + "WHERE id=" + id;
+        String query = Police.listQuery + "WHERE `Officers ID`=" + id +";";
         ResultSet resultSet = stub.execute(query);
         Police newcase = null;
         if (resultSet.next()) {

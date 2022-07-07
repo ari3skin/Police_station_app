@@ -4,12 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Weapon{
-    int id;
-    String name;
-    String type;
-    String status;
-    int officerID;
-    public static String listQuery = "";
+    public int id;
+    public String name;
+    public String type;
+    public String status;
+    public int officerID;
+
+    public Police police;
+    public static String listQuery = "SELECT * FROM `weapons list`;";
 
     public Weapon(int id, String name, String type, String status, int officerID){
         this.id =id;
@@ -20,11 +22,11 @@ public class Weapon{
     }
 
     public static Weapon fromResultSet(ResultSet resultSet) throws SQLException {
-        int id = resultSet.getInt("id");
-        String name = resultSet.getString("name");
-        String type = resultSet.getString("type");
-        String status = resultSet.getString("status");
-        int officerID = resultSet.getInt("officer_id");
+        int id = resultSet.getInt("Weapons ID");
+        String name = resultSet.getString("Weapons Name");
+        String type = resultSet.getString("Weapons Type");
+        String status = resultSet.getString("Weapon Status");
+        int officerID = resultSet.getInt("Officer ID");
 
         Weapon weapon = new Weapon(id, name, type, status, officerID);
 
