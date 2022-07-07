@@ -18,6 +18,8 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.rmi.RemoteException;
+import java.sql.SQLException;
 import java.util.Objects;
 
 import static application.police_station_app.Filing_forms.scn6;
@@ -189,7 +191,7 @@ public class Dashboard extends Application {
         Label lbl5 = new Label("Utumishi Kwa Wote");
         Label lbl6 = new Label("Report Generation");
         Button btn_crime_report = new Button("Crime Reports");
-        Button btn_case_report = new Button("Case Reports");
+        Button btn_criminal_report = new Button("Criminal Reports");
         Button btn_weapons_report = new Button("Weapons Reports");
         ImageView view4 = new ImageView();
         view4.setImage(img2);
@@ -197,7 +199,7 @@ public class Dashboard extends Application {
         //adding all controls
         navigation2.getChildren().addAll(view3, lbl4, btn_forms_report, btn_reports_report, btn_logout_report);
         pane5.getChildren().add(navigation2);
-        pane5.getChildren().addAll(view4,lbl5, lbl6, btn_crime_report,btn_case_report,btn_weapons_report);
+        pane5.getChildren().addAll(view4,lbl5, lbl6, btn_crime_report,btn_criminal_report,btn_weapons_report);
 
         //customizing controls
         //1.VBox and its children
@@ -270,12 +272,12 @@ public class Dashboard extends Application {
         btn_crime_report.setId("btn_dashboard");
         btn_crime_report.setCursor(Cursor.cursor("HAND"));
 
-        btn_case_report.setPrefSize(170, 45);
-        btn_case_report.setLayoutX(500.0);
-        btn_case_report.setLayoutY(116.0);
-        btn_case_report.setMnemonicParsing(false);
-        btn_case_report.setId("btn_dashboard");
-        btn_case_report.setCursor(Cursor.cursor("HAND"));
+        btn_criminal_report.setPrefSize(170, 45);
+        btn_criminal_report.setLayoutX(500.0);
+        btn_criminal_report.setLayoutY(116.0);
+        btn_criminal_report.setMnemonicParsing(false);
+        btn_criminal_report.setId("btn_dashboard");
+        btn_criminal_report.setCursor(Cursor.cursor("HAND"));
 
         btn_weapons_report.setPrefSize(170, 45);
         btn_weapons_report.setLayoutX(350.0);
@@ -315,6 +317,26 @@ public class Dashboard extends Application {
                 throw new RuntimeException(ex);
             }
         });
+        btn_crime_report.setOnAction(e -> {
+            try {
+                crimeReports();
+                stage.hide();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } catch (RemoteException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        btn_criminal_report.setOnAction(e -> {
+            try {
+                criminalReport();
+                stage.hide();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } catch (RemoteException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         stage.setTitle("Kenya Police Service Program");
         stage.setResizable(false);
@@ -349,5 +371,15 @@ public class Dashboard extends Application {
         Filing_forms obj1 = new Filing_forms();
         stage.setScene(scn7);
         obj1.start(stage);
+    }
+    public void crimeReports() throws SQLException, RemoteException {
+        Stage primaryStage = new Stage();
+        CrimeReport obj1 = new CrimeReport();
+        obj1.start(primaryStage);
+    }
+    public void criminalReport() throws SQLException, RemoteException {
+        Stage primaryStage = new Stage();
+        CriminalReport obj1 = new CriminalReport();
+        obj1.start(primaryStage);
     }
 }
