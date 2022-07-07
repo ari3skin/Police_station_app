@@ -261,6 +261,7 @@ public class Index extends Application {
 //        3.buttons
         btn_back_reg.setLayoutX(20.0);
         btn_back_reg.setLayoutY(20.0);
+        btn_back_reg.setMnemonicParsing(false);
         btn_back_reg.setId("btn_exit");
         btn_back_reg.setCursor(Cursor.cursor("HAND"));
 
@@ -291,10 +292,10 @@ public class Index extends Application {
         btn_back_reg.setOnAction(e -> stage.setScene(scn1));
         btn_login_scn.setOnAction(e -> stage.setScene(scn2));
         btn_register_scn.setOnAction(e -> stage.setScene(scn3));
-
         btn_login.setOnAction(e -> {
             try {
                 dashboard();
+                stage.hide();
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }
