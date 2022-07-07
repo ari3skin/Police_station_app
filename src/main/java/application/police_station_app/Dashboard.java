@@ -75,7 +75,7 @@ public class Dashboard extends Application {
         //adding the controls to the pane and vbox
         navigation1.getChildren().addAll(view1, lbl1, btn_forms, btn_reports, btn_logout);
         pane4.getChildren().addAll(navigation1);
-        pane4.getChildren().addAll(lbl2, lbl3, btn_weapons, btn_cases, view2, btn_criminals, btn_officer_reg);
+        pane4.getChildren().addAll(lbl2, lbl3, btn_weapons, btn_cases, view2, btn_criminals);
 
 //customizing the controls
 
