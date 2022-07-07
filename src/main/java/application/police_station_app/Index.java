@@ -295,6 +295,7 @@ public class Index extends Application {
         btn_login.setOnAction(e -> {
             try {
                 dashboard();
+                stage.hide();
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }

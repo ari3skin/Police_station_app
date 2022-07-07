@@ -20,6 +20,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Objects;
 
+import static application.police_station_app.Filing_forms.scn6;
+import static application.police_station_app.Filing_forms.scn7;
+
 public class Dashboard extends Application {
     static Scene scn4, scn5;
     static AnchorPane pane4, pane5;
@@ -296,31 +299,18 @@ public class Dashboard extends Application {
         btn_forms_report.setOnAction(e -> stage.setScene(scn4));
         btn_reports.setOnAction(e -> stage.setScene(scn5));
         btn_reports_report.setOnAction(e -> stage.setScene(scn5));
-
         btn_cases.setOnAction(e -> {
             try {
-                form_filing();
-            } catch (Exception ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-        btn_criminals.setOnAction(e -> {
-            try {
-                form_filing();
+                cases();
+                stage.hide();
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }
         });
         btn_weapons.setOnAction(e -> {
             try {
-                form_filing();
-            } catch (Exception ex) {
-                throw new RuntimeException(ex);
-            }
-        });
-        btn_officer_reg.setOnAction(e -> {
-            try {
-                form_filing();
+                weapons();
+                stage.hide();
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
             }
@@ -344,15 +334,20 @@ public class Dashboard extends Application {
             stage.close();
         }
     }
-
     public void logout() {
         Platform.exit();
         System.out.println("You Have Exited the program");
     }
-
-    public void form_filing() throws Exception{
+    public void weapons() throws Exception{
         Stage stage = new Stage();
         Filing_forms obj1 = new Filing_forms();
+        stage.setScene(scn6);
+        obj1.start(stage);
+    }
+    public void cases() throws Exception{
+        Stage stage = new Stage();
+        Filing_forms obj1 = new Filing_forms();
+        stage.setScene(scn7);
         obj1.start(stage);
     }
 }
