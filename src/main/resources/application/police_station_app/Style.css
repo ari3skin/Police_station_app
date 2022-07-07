@@ -35,11 +35,14 @@
 
 /*styling DASHBOARD*/
 
-#lbl_motto,#fld_search{
+#lbl_motto{
     -fx-border-color: #121619;
     -fx-border-radius: 20px;
+    -fx-text-alignment: center;
+    -fx-font-size: 24px;
 }
-#title{
+
+#navigation_title{
     -fx-text-fill: #FFB703;
 }
 #navigation{
@@ -49,18 +52,33 @@
     -fx-background-color: transparent;
 }
 
+/*styling filing forms and report generation*/
+#lbl_filling{
+    -fx-text-alignment: center;
+    -fx-font-size: 25px;
+}
+#fld_ob_number{
+    -fx-background-color: transparent;
+    -fx-border-radius: 20px;
+    -fx-text-alignment: center;
+    -fx-border-color: #121619;
+
+}
 /*styling buttons*/
-#btn_register, #btn_login, #btn_exit, #btn_forgortPassword, #btn_back, #btn_logout, #btn_home {
+#btn_register, #btn_login, #btn_exit, #btn_forgortPassword, #btn_back, #btn_logout, #btn_home, #btn_filing_forms {
     -fx-background-color: #121619;
     -fx-text-fill: #FFB703;
     -fx-border-radius: 20px;
     -fx-font-weight: bolder;
 }
-#btn_home{
-    -fx-font-size: 20px;
+#btn_dashboard{
+    -fx-font-size: 15px;
     -fx-border-radius: 20px;
+    -fx-background-color: #121619;
+    -fx-text-fill: #FFB703;
+    -fx-font-weight: bolder;
 }
-#btn_crimeReport, #btn_weapons,#btn_statistics {
+#btn_forms, #btn_reports {
     -fx-background-color: #224092;
     -fx-border-color: #A56AD7;
     -fx-border-radius: 20px;
