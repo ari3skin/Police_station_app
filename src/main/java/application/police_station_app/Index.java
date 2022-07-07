@@ -292,7 +292,6 @@ public class Index extends Application {
         btn_back_reg.setOnAction(e -> stage.setScene(scn1));
         btn_login_scn.setOnAction(e -> stage.setScene(scn2));
         btn_register_scn.setOnAction(e -> stage.setScene(scn3));
-
         btn_login.setOnAction(e -> {
             try {
                 dashboard();

@@ -176,9 +176,9 @@ public class Dashboard extends Application {
         // Vbox Navigation:
         VBox navigation2 = new VBox();
         Label lbl4 = new Label("Navigation Board");
-        Button btn_forms_rep = new Button("Filing Forms");
-        Button btn_reports_rep = new Button("Reports");
-        Button btn_logout_rep = new Button("Logout");
+        Button btn_forms_report = new Button("Filing Forms");
+        Button btn_reports_report = new Button("Reports");
+        Button btn_logout_report = new Button("Logout");
         ImageView view3 = new ImageView();
         view3.setImage(img1);
 
@@ -192,7 +192,7 @@ public class Dashboard extends Application {
         view4.setImage(img2);
 
         //adding all controls
-        navigation2.getChildren().addAll(view3, lbl4, btn_forms_rep, btn_reports_rep, btn_logout_rep);
+        navigation2.getChildren().addAll(view3, lbl4, btn_forms_report, btn_reports_report, btn_logout_report);
         pane5.getChildren().add(navigation2);
         pane5.getChildren().addAll(view4,lbl5, lbl6, btn_crime_report,btn_case_report,btn_weapons_report);
 
@@ -218,25 +218,25 @@ public class Dashboard extends Application {
         navigation2.setMargin(lbl4, new Insets(5, 0, 0, 10));
 
         //1-3.buttons
-        btn_forms_rep.setPrefSize(110, 45);
-        btn_forms_rep.setId("btn_crimeReport");
-        navigation2.setMargin(btn_forms_rep, new Insets(10, 0, 0, 20));
-        btn_forms_rep.setPadding(new Insets(10));
-        btn_forms_rep.setCursor(Cursor.cursor("HAND"));
-        btn_forms_rep.setId("btn_forms");
+        btn_forms_report.setPrefSize(110, 45);
+        btn_forms_report.setId("btn_crimeReport");
+        navigation2.setMargin(btn_forms_report, new Insets(10, 0, 0, 20));
+        btn_forms_report.setPadding(new Insets(10));
+        btn_forms_report.setCursor(Cursor.cursor("HAND"));
+        btn_forms_report.setId("btn_forms");
 
-        btn_reports_rep.setPrefSize(134, 45);
-        btn_reports_rep.setId("btn_weapons");
-        navigation2.setMargin(btn_reports_rep, new Insets(10, 0, 0, 10));
-        btn_reports_rep.setPadding(new Insets(10));
-        btn_reports_rep.setCursor(Cursor.cursor("HAND"));
-        btn_reports_rep.setId("btn_reports");
+        btn_reports_report.setPrefSize(134, 45);
+        btn_reports_report.setId("btn_weapons");
+        navigation2.setMargin(btn_reports_report, new Insets(10, 0, 0, 10));
+        btn_reports_report.setPadding(new Insets(10));
+        btn_reports_report.setCursor(Cursor.cursor("HAND"));
+        btn_reports_report.setId("btn_reports");
 
-        btn_logout_rep.setPrefSize(100, 45);
-        btn_logout_rep.setId("btn_logout");
-        navigation2.setMargin(btn_logout_rep, new Insets(10, 0, 0, 30));
-        btn_logout_rep.setPadding(new Insets(10));
-        btn_logout_rep.setCursor(Cursor.cursor("HAND"));
+        btn_logout_report.setPrefSize(100, 45);
+        btn_logout_report.setId("btn_logout");
+        navigation2.setMargin(btn_logout_report, new Insets(10, 0, 0, 30));
+        btn_logout_report.setPadding(new Insets(10));
+        btn_logout_report.setCursor(Cursor.cursor("HAND"));
 
 
         //2.Anchor pane and its children
@@ -291,11 +291,40 @@ public class Dashboard extends Application {
 
         //button events
         btn_logout.setOnAction(e -> logout());
-        btn_logout_rep.setOnAction(e -> logout());
+        btn_logout_report.setOnAction(e -> logout());
         btn_forms.setOnAction(e -> stage.setScene(scn4));
-        btn_forms_rep.setOnAction(e -> stage.setScene(scn4));
+        btn_forms_report.setOnAction(e -> stage.setScene(scn4));
         btn_reports.setOnAction(e -> stage.setScene(scn5));
-        btn_reports_rep.setOnAction(e -> stage.setScene(scn5));
+        btn_reports_report.setOnAction(e -> stage.setScene(scn5));
+
+        btn_cases.setOnAction(e -> {
+            try {
+                form_filing();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        btn_criminals.setOnAction(e -> {
+            try {
+                form_filing();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        btn_weapons.setOnAction(e -> {
+            try {
+                form_filing();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        btn_officer_reg.setOnAction(e -> {
+            try {
+                form_filing();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         stage.setTitle("Kenya Police Service Program");
         stage.setResizable(false);
@@ -319,5 +348,11 @@ public class Dashboard extends Application {
     public void logout() {
         Platform.exit();
         System.out.println("You Have Exited the program");
+    }
+
+    public void form_filing() throws Exception{
+        Stage stage = new Stage();
+        Filing_forms obj1 = new Filing_forms();
+        obj1.start(stage);
     }
 }
