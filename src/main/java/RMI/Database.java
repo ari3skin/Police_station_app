@@ -9,7 +9,7 @@ public class Database {
     Database() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/exercise?", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/kps?", "root", "");
 
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -18,6 +18,7 @@ public class Database {
     }
 
     public ResultSet execute(String query) throws SQLException {
+        System.out.println(query);
         Statement statement = connection.createStatement();
         return statement.executeQuery(query);
     }

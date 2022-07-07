@@ -66,6 +66,22 @@ public class Client {
         }
         return list;
     }
+    public ArrayList<Crime> crimeList(String query) throws SQLException, RemoteException {
+        ArrayList<Crime> list = new ArrayList<>();
+        ResultSet resultSet = stub.execute(query);
+        if (resultSet.next()) {
+            list.add(Crime.fromResultSet(resultSet));
+        }
+        return list;
+    }
+    public ArrayList<Criminal> criminalList(String query) throws SQLException, RemoteException {
+        ArrayList<Criminal> list = new ArrayList<>();
+        ResultSet resultSet = stub.execute(query);
+        if (resultSet.next()) {
+            list.add(Criminal.fromResultSet(resultSet));
+        }
+        return list;
+    }
 
     public Weapon getWeapon(int id) throws SQLException, RemoteException {
         String query = Weapon.listQuery + "WHERE id=" + id;
@@ -88,7 +104,7 @@ public class Client {
     }
 
     public Crime getCrime(int id) throws SQLException, RemoteException {
-        String query = Crime.listQuery + "WHERE id=" + id;
+        String query = Crime.listQuery + "WHERE id=" + id+";";
         ResultSet resultSet = stub.execute(query);
         Crime newcase = null;
         if (resultSet.next()) {
