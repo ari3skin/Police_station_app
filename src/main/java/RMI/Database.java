@@ -9,7 +9,7 @@ public class Database {
     public Database() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/police", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/police2", "root", "");
 
         } catch (Exception e) {
             throw new RuntimeException(e);

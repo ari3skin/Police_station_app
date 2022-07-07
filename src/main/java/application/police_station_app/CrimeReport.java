@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class CrimeReport extends Application {
+
     Client client;
 
     {

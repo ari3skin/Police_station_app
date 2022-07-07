@@ -1,5 +1,7 @@
 package application.police_station_app;
 
+import RMI.Client;
+import RMI.Database;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -61,6 +63,34 @@ public class Filing_forms extends Application {
         ChoiceBox fld_status = new ChoiceBox(); fld_status.getItems().add("Leased"); fld_status.getItems().add("Available");
         TextField fld_officer_id = new TextField();
         Button btn_submit = new Button("Submit Details");
+        Database client=new Database();
+        btn_submit.setOnAction(e -> {
+            String Name = fld_weapon_name.getText();
+            String Type = fld_weapon_type.getText();
+            String status = ("Leased");
+            String id = fld_officer_id.getText();
+
+            try {
+
+                String query = "INSERT INTO weapons_list(WeaponsName,WeaponsType,WeaponStatus,OfficerID)" +
+                        "VALUES('"+Name+"','"+Type+"','"+status+"','"+id+"')";
+                client.executeUpdate(query);
+                fld_weapon_name.setPromptText("");
+                fld_weapon_type.setPromptText("");
+                fld_officer_id.setPromptText("");
+                Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                al.setContentText("Successful Registration");
+                al.show();
+
+
+            } catch (Exception ex) {
+                Alert al = new Alert(Alert.AlertType.WARNING);
+                al.setContentText("Unable to register");
+                al.show();
+                throw new RuntimeException(ex);
+
+            }
+        });
 
         navigation1.getChildren().addAll(view1,btn_dashboard,btn_cases,btn_criminals,btn_officer_reg,btn_close);
         pane6.getChildren().addAll(navigation1,btn_submit);
@@ -207,6 +237,34 @@ public class Filing_forms extends Application {
         TextArea fld_description = new TextArea("Describe your Case here:");
         Button btn_clear_case = new Button("Clear Form");
         Button btn_submit_case = new Button("Submit Details");
+        btn_submit_case.setOnAction(e -> {
+            String Name = fld_officer_id_case.getText();
+            String status = ("Leased");
+            String id = fld_victim_id.getText();
+            String description =fld_description.getText();
+
+            try {
+
+                String query = "INSERT INTO cases(OfficerID,Victim,Description)" +
+                        "VALUES('"+Name+"','"+id+"','"+description+"')";
+                client.executeUpdate(query);
+                fld_officer_id_case.setPromptText("");
+                fld_victim_id.setPromptText("");
+                fld_description.setPromptText("");
+                fld_date.setPromptText("");
+                Alert al = new Alert(Alert.AlertType.CONFIRMATION);
+                al.setContentText("Successful Registration");
+                al.show();
+
+
+            } catch (Exception ex) {
+                Alert al = new Alert(Alert.AlertType.WARNING);
+                al.setContentText("Unable to register");
+                al.show();
+                throw new RuntimeException(ex);
+
+            }
+        });
 
         navigation2.getChildren().addAll(view2,btn_dashboard_case,btn_weapons_case,btn_criminals_case,btn_officer_reg_case,btn_close_case);
         pane7.getChildren().add(navigation2);
