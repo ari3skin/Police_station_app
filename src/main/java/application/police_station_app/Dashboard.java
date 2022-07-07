@@ -337,6 +337,16 @@ public class Dashboard extends Application {
                 throw new RuntimeException(ex);
             }
         });
+        btn_weapons_report.setOnAction(e -> {
+            try {
+                weaponReport();
+                stage.hide();
+            } catch (SQLException ex) {
+                throw new RuntimeException(ex);
+            } catch (RemoteException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
 
         stage.setTitle("Kenya Police Service Program");
         stage.setResizable(false);
@@ -380,6 +390,11 @@ public class Dashboard extends Application {
     public void criminalReport() throws SQLException, RemoteException {
         Stage primaryStage = new Stage();
         CriminalReport obj1 = new CriminalReport();
+        obj1.start(primaryStage);
+    }
+    public void weaponReport() throws SQLException, RemoteException {
+        Stage primaryStage = new Stage();
+        WeaponReport obj1 = new WeaponReport();
         obj1.start(primaryStage);
     }
 }
